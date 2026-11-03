@@ -1,0 +1,426 @@
+/* ======================================================
+   I.E. 81025 JOSE ANTONIO ENCINAS
+   CSS NIVELES (ADAPTADO A CELULARES) - 2026
+   ====================================================== */
+
+/* ---------- 1. VARIABLES ---------- */
+:root {
+  --azul: #0A1931;
+  --amarillo: #FFD700;
+  --blanco: #ffffff;
+  --gris-claro: #f1f5f9;
+  --texto: #334155;
+}
+
+/* ---------- 2. BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--gris-claro);
+  color: var(--texto);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- 3. HEADER ---------- */
+.header-azul {
+  background: var(--azul);
+  border-bottom: 5px solid var(--amarillo);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-azul nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--amarillo);
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.logo h1 small {
+  display: block;
+  color: var(--amarillo);
+  font-size: 11px;
+}
+
+/* BOTÓN HAMBURGUESA (Oculto en computadora) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ---------- 4. MENU ---------- */
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu a {
+  color: #cbd5e1;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--amarillo);
+}
+
+/* ---------- 5. DROPDOWN NOSOTROS ---------- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botón limpio sin bordes ni fondos raros */
+.btn-menu-dropdown {
+  background: none;
+  border: none;
+  outline: none;
+  color: #cbd5e1;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Cambia a amarillo al pasar el mouse por la zona */
+.dropdown:hover .btn-menu-dropdown {
+  color: var(--amarillo);
+}
+
+/* Menú flotante con puente invisible integrado en el padding */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  z-index: 100;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding-top: 10px; /* Reemplaza el truco largo del ::before */
+  margin-top: -10px;
+}
+
+/* Mostrar menú (por JS o por Hover en PC) */
+.dropdown-menu.show,
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlaces del menú */
+.dropdown-menu a {
+  color: var(--azul) !important;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #fef9c3;
+}
+
+
+/* ---------- 6. HERO ---------- */
+.hero-niveles {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--azul);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-niveles-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10,25,49,.7), rgba(10,25,49,.9)), url('../img/Niveles.jpeg') center/cover;
+}
+
+.hero-niveles-text {
+  position: relative;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-niveles-text h2 {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.hero-niveles-text h2 span {
+  color: var(--amarillo);
+}
+
+.barra-hero {
+  width: 60px;
+  height: 4px;
+  background: var(--amarillo);
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* ---------- 7. SECCIONES Y TARJETAS ---------- */
+.horarios-wrap, 
+.detalle-wrap, 
+.requisitos-wrap {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.titulo-seccion {
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.hor-card {
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hor-card.active {
+  background: var(--azul);
+  color: #fff;
+  border-color: var(--azul);
+  box-shadow: 0 8px 20px rgba(10,25,49,0.15);
+}
+
+.hor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* ---------- 8. DETALLE NIVEL ---------- */
+.detalle-nivel {
+  display: none;
+  background: #fff;
+  border-left: 6px solid var(--azul);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.detalle-nivel.activo {
+  display: block;
+}
+
+.detalle-top {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.foto-nivel {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid var(--amarillo);
+}
+
+.nivel-tag {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.detalle-grid div {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #f1f5f9;
+}
+
+/* ---------- 9. REQUISITOS ---------- */
+.requisitos-card {
+  background: #fff;
+  border-left: 6px solid var(--amarillo);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.req-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.req-icon {
+  background: var(--azul);
+  color: var(--amarillo);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.req-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.req-item {
+  display: flex;
+  gap: 10px;
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.req-item.nota {
+  background: #fef9c3;
+  border: 1px dashed #eab308;
+  grid-column: 1 / -1; /* Ocupa todo el ancho */
+}
+
+/* ---------- 10. FOOTER ---------- */
+.footer-azul {
+  background: var(--azul);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px;
+  border-top: 4px solid var(--amarillo);
+  margin-top: 50px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  
+  .menu-toggle {
+    display: block; /* Muestra el botón hamburguesa ☰ */
+  }
+
+  .menu {
+    display: none; /* Esconde el menú horizontal */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--azul);
+    padding: 20px;
+    gap: 12px;
+    border-bottom: 4px solid var(--amarillo);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Se activa con tu archivo cabecera.js al hacer click */
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .btn-menu-dropdown {
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  .dropdown-menu {
+    position: static; /* Empuja el contenido hacia abajo en el celular */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+    border: none;
+    margin-top: 5px;
+    border-radius: 8px;
+  }
+
+  .dropdown-menu a {
+    color: #ffffff !important; /* Fuerza los textos a blanco sobre fondo oscuro */
+    padding-left: 20px;
+  }
+
+  /* Reorganización de las rejillas de contenido a 1 sola columna */
+  .grid-3, 
+  .detalle-grid, 
+  .req-grid, 
+  .detalle-top {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-niveles h2 {
+    font-size: 28px;
+  }
+}

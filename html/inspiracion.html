@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biografía de José Antonio Encinas Franco, patrono de la I.E. 81025">
+  <title>Patrono | I.E. 81025 José Antonio Encinas</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/inspo.css">
+</head>
+<body>
+<header class="header-azul">
+  <nav>
+    <a href="../index.html" class="logo">
+      <img src="../img/Cole.jpeg" alt="Insignia">
+      <h1><small>I.E. N° 81025</small> JOSÉ ANTONIO ENCINAS</h1>
+    </a>
+    <div class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="inspiracion.html">Nuestro Patrono</a> 
+      <a href="niveles.html" class="active">Niveles</a>
+      <div class="dropdown">
+        <button type="button" class="btn-menu-dropdown" id="btnNosotros">Nosotros ▾</button>
+        <div id="menuNosotros" class="dropdown-menu">
+          <a href="mision.html">Misión y Visión</a>
+          <a href="resena.html">Reseña Histórica</a>
+          
+        </div>
+      </div>
+      <a href="ubicacion.html">Ubicación</a>
+    </div>
+  </nav>
+</header>
+
+  <section class="hero-mini" role="banner">
+    <div class="hero-mini-content">
+      <h2>Nuestro <span>Patrono</span></h2>
+      <p>El maestro que inspiró el nombre de nuestra institución</p>
+    </div>
+  </section>
+
+  <main id="contenido" class="patrono-wrap">
+
+    <!-- PRESENTACION -->
+    <section class="card presentacion">
+      <div class="presentacion-img">
+        <img src="../img/Encinas.jpg" alt="Retrato de José Antonio Encinas Franco">
+      </div>
+      <div class="presentacion-texto">
+        <span class="badge">1888 - 1958</span>
+        <h2>José Antonio Encinas Franco</h2>
+        <p class="cargo">Educador, Antropólogo y Reformador de la Educación Peruana</p>
+        <p class="resumen">
+          Puno, 30 de mayo de 1888 - Lima, 10 de julio de 1958. Fue un educador que defendió 
+          una educación para la mayoría. Construyó una doctrina educativa que sirviera a la 
+          niñez y juventud peruanas, por eso nuestra I.E. 81025 lleva con orgullo su nombre.
+        </p>
+        <blockquote class="frase">
+          "No hay cargo más alto, en la sociedad, que el ser maestro."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- BIOGRAFIA EN TABS INTERACTIVOS -->
+    <div class="tabs" role="tablist" aria-label="Biografía de Encinas">
+      <button role="tab" aria-selected="true" aria-controls="tab1" id="btn-tab1" class="tab-btn active">Inicios</button>
+      <button role="tab" aria-selected="false" aria-controls="tab2" id="btn-tab2" class="tab-btn">Formación</button>
+      <button role="tab" aria-selected="false" aria-controls="tab3" id="btn-tab3" class="tab-btn">Vida Política</button>
+      <button role="tab" aria-selected="false" aria-controls="tab4" id="btn-tab4" class="tab-btn">Legado</button>
+    </div>
+
+    <div class="tabs-contenido">
+      <section id="tab1" role="tabpanel" aria-labelledby="btn-tab1" class="card tab-panel active">
+        <h3>1. Sus Inicios en Puno</h3>
+        <p>
+          Hijo de Mariano Encinas y Matilde Franco. Estudió en el Glorioso Colegio Nacional 
+          de San Carlos de Puno. Fue becado a la Escuela Normal de Varones de Lima (1905-1906),
+          antecesora de La Cantuta.
+        </p>
+        <p>
+          En 1907, con solo 19 años, es nombrado Director del Centro Escolar de Varones 881 de Puno,
+          donde inicia la experiencia pedagógica de la <strong>Primera Escuela Nueva en el Perú</strong>.
+        </p>
+      </section>
+
+      <section id="tab2" role="tabpanel" aria-labelledby="btn-tab2" class="card tab-panel" hidden>
+        <h3>2. Formación Internacional</h3>
+        <ul class="lista">
+          <li>Bachiller y Doctor en Letras y Jurisprudencia - UNMSM</li>
+          <li>M.Sc. en Antropología - Universidad de Cambridge, Inglaterra</li>
+          <li>Doctor en Ciencias de la Educación - Universidad de La Sorbona, París</li>
+          <li>Estudios en Bolonia, Padua y Oxford. Becario Carnegie 1927</li>
+          <li>Profesor de Psicología en la Universidad de San Carlos de Guatemala</li>
+        </ul>
+      </section>
+      <section id="tab3" role="tabpanel" aria-labelledby="btn-tab3" class="card tab-panel" hidden>
+        <h3>3. Vida Política y Exilio</h3>
+        <p>
+          Diputado por Puno en 1919 para la Asamblea que dio la Constitución de 1920.
+          Diputado por Lima hasta 1924. Su oposición a la reelección de Leguía le valió ser 
+          deportado a Guatemala.
+        </p>
+        <p>
+          A su retorno en 1930 tras la caída de Leguía, fue nombrado <strong>Rector de la 
+          Universidad Nacional Mayor de San Marcos en 1931</strong>. Entre 1933 y 1950 fue 
+          desterrado 3 veces. Senador por Puno en 1945 y reelecto en 1950.
+        </p>
+      </section>
+
+      <section id="tab4" role="tabpanel" aria-labelledby="btn-tab4" class="card tab-panel destacado" hidden>
+        <h3>4. Su Legado: El Plan Dalton</h3>
+        <p>
+          El 30 de mayo de 1933 funda junto a sus hermanos el <strong>Colegio Dalton en Lince, Lima</strong>,
+          para poner en práctica el innovador sistema de la pedagoga norteamericana Helen Parkhurst.
+        </p>
+        <p>
+          <strong>¿Por qué nuestro colegio lleva su nombre?</strong> Porque Encinas luchó por una escuela 
+          pública, gratuita, crítica y centrada en el niño, no en la memorización. Su obra 
+          <em>"Un Ensayo de Escuela Nueva en el Perú"</em> (1932) es la base de la educación moderna peruana.
+        </p>
+        <button class="btn-libros" id="btnObras" aria-expanded="false" aria-controls="obras">
+          Ver sus obras principales ▾
+        </button>
+        <div id="obras" class="obras-ocultas" hidden>
+          <p>
+            • Un Ensayo de escuela nueva en el Perú<br>
+            • La educación: su función social<br>
+            • Causas de la Criminalidad Indígena<br>
+            • Historia de las universidades de Bolonia y Padua
+          </p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- FOOTER IGUAL AL INDEX -->
+  <footer class="footer-azul">
+    <p><strong>I.E. 81025 JOSÉ ANTONIO ENCINAS</strong> © 2026 | Av. Bolivia 489 - Trujillo</p>
+    <small>Pública de Gestión Directa | Escolarizada - Mixta - Urbana | Buenos Aires, Víctor Larco Herrera</small>
+  </footer>
+
+  <script src="../js/inspo.js"></script>
+</body>
+</html>

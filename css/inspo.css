@@ -1,0 +1,378 @@
+/* ======================================================
+   I.E. 81025 JOSE ANTONIO ENCINAS
+   CSS PATRONO / INSPO (ADAPTADO A CELULARES) - 2026
+   ====================================================== */
+
+/* ---------- 1. VARIABLES ---------- */
+:root {
+  --azul: #0A1931;
+  --amarillo: #FFD700;
+  --blanco: #ffffff;
+  --azul-claro: #1e3a8a;
+  --amarillo-hover: #eab308;
+}
+
+/* ---------- 2. ELEMENTOS DE CABECERA Y DROPDOWN ---------- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-menu-dropdown {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.dropdown-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 24px rgba(10, 25, 49, 0.15);
+  border-radius: 8px;
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid rgba(10, 25, 49, 0.1);
+}
+
+.dropdown-menu a {
+  color: var(--azul) !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+}
+
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* BOTÓN HAMBURGUESA (Oculto en computadoras) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== HERO MINI ===== */
+.hero-mini {
+  background: var(--azul);
+  background-image: linear-gradient(90deg, rgba(10,25,49,.95), rgba(10,25,49,.75));
+  padding: 60px 24px;
+  text-align: center;
+  border-bottom: 5px solid var(--amarillo);
+}
+
+.hero-mini h2 {
+  color: #fff;
+  font-size: 34px;
+}
+
+.hero-mini h2 span {
+  color: var(--amarillo);
+}
+
+.hero-mini p {
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+/* ===== WRAP ===== */
+.patrono-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+/* ===== PRESENTACION ===== */
+.presentacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(10,25,49,.06);
+  border-left: 6px solid var(--amarillo);
+}
+
+.presentacion-img {
+  flex: 0 0 260px;
+  margin: 0 auto;
+}
+
+.presentacion-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  border-bottom: 6px solid var(--azul);
+}
+
+.presentacion-texto {
+  flex: 1 1 450px;
+}
+
+.badge {
+  background: var(--azul);
+  color: var(--amarillo);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.presentacion-texto h2 {
+  margin: 12px 0 4px;
+  color: var(--azul);
+  font-size: 26px;
+}
+
+.cargo {
+  color: var(--azul-claro);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+  border-left: 3px solid var(--amarillo);
+  padding-left: 10px;
+}
+
+.resumen {
+  color: #334155;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.frase {
+  background: #fef9c3;
+  border-left: 4px solid var(--amarillo);
+  padding: 12px 16px;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  color: var(--azul);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ===== TABS INTERACTIVOS ===== */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 28px 0 16px;
+}
+
+.tab-btn {
+  background: #fff;
+  border: 2px solid var(--azul);
+  color: var(--azul);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.tab-btn:hover,
+.tab-btn:focus-visible {
+  background: var(--azul);
+  color: var(--amarillo);
+  outline: none;
+}
+
+.tab-btn.active,
+.tab-btn[aria-selected="true"] {
+  background: var(--azul);
+  color: var(--amarillo);
+  border-color: var(--azul);
+  box-shadow: 0 4px 12px rgba(10,25,49,.2);
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.05);
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  color: var(--azul);
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--amarillo);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.card.destacado {
+  border-left: 6px solid var(--azul);
+  background: linear-gradient(180deg, #fff, #fefce8);
+}
+
+.lista {
+  padding-left: 18px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.lista li {
+  margin-bottom: 8px;
+}
+
+.lista li::marker {
+  color: var(--amarillo);
+}
+
+/* ===== BOTON OBRAS ===== */
+.btn-libros {
+  margin-top: 14px;
+  background: var(--amarillo);
+  color: var(--azul);
+  border: 2px solid var(--amarillo);
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-libros:hover {
+  background: var(--amarillo-hover);
+  border-color: var(--amarillo-hover);
+}
+
+.obras-ocultas {
+  margin-top: 14px;
+  background: var(--azul);
+  color: #e2e8f0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border-left: 4px solid var(--amarillo);
+  line-height: 1.6;
+}
+
+/* Accesibilidad focus */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+}
+
+/* ======================================================
+   ⚠️ MEDIA QUERIES - ADAPTACIÓN EXCLUSIVA PARA CELULARES
+   ====================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Muestra el botón de menú hamburguesa ☰ */
+  }
+
+  .menu {
+    display: none; /* Oculta el menú de navegación horizontal tradicional */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--azul);
+    padding: 20px;
+    gap: 12px;
+    border-bottom: 4px solid var(--amarillo);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 99999;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .btn-menu-dropdown {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    position: static; /* Colapsa hacia abajo empujando el menú móvil */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+    border: none;
+    margin-top: 5px;
+    border-radius: 8px;
+  }
+
+  .dropdown-menu a {
+    color: #ffffff !important; /* Texto blanco sobre el fondo oscuro del celular */
+    padding-left: 24px;
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* Ajustes en los componentes internos del Patrono */
+  .presentacion {
+    flex-direction: column; /* Apila el retrato arriba y el texto abajo */
+    padding: 20px;
+  }
+
+  .presentacion-img {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .presentacion-img img {
+    height: 280px;
+  }
+
+  .tabs {
+    justify-content: center; /* Centra los botones de biografía para que quepan holgadamente */
+    gap: 6px;
+  }
+
+  .tab-btn {
+    width: 100%; /* Botones de biografía en ancho completo para fácil pulsación dactilar */
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .hero-mini h2 {
+    font-size: 26px;
+  }
+}

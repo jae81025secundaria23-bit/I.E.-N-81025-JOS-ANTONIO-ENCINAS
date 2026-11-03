@@ -1,0 +1,278 @@
+/* ======================================================
+   I.E. 81025 JOSE ANTONIO ENCINAS
+   CSS UBICACIÓN (ADAPTADO A CELULARES) - 2026
+   ====================================================== */
+
+/* ---------- 1. VARIABLES BASE ---------- */
+:root {
+  --azul: #0A1931;
+  --amarillo: #FFD700;
+  --blanco: #ffffff;
+}
+
+/* ===== WRAP ===== */
+.ubicacion-wrap {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.grid-ubicacion {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grid-ubicacion {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== INFO CARD ===== */
+.info-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(10,25,49,.08);
+  border-left: 6px solid var(--amarillo);
+  position: sticky;
+  top: 90px;
+  text-align: left; /* Alinea los datos de información a la izquierda */
+}
+
+.badge-ub {
+  background: var(--azul);
+  color: var(--amarillo);
+  display: inline-block; /* ¡Corrección: 'center' no existe en display! */
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  color: var(--azul);
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.dato {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dato .icon {
+  width: 36px;
+  height: 36px;
+  background: #fef9c3;
+  border: 1px solid var(--amarillo);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.dato strong {
+  display: block;
+  color: var(--azul);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.dato p {
+  color: #334155;
+  font-size: 14px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: var(--amarillo);
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+  margin-top: 6px;
+  padding: 0;
+}
+
+.link-btn:hover {
+  color: #1e3a8a; /* Color fallback azul claro */
+}
+
+.copiado-msg {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #15803d;
+}
+
+/* ===== ACCIONES ===== */
+.acciones {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.btn.full {
+  width: 100%;
+  text-align: center;
+}
+
+.btn.dark {
+  background: var(--azul);
+  color: #fff;
+  border-color: var(--azul);
+}
+
+.btn.dark:hover {
+  background: #1e3a8a;
+  color: var(--amarillo);
+}
+
+/* ===== MAPA CARD ===== */
+.mapa-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(10,25,49,.08);
+  border: 1px solid #e2e8f0;
+  padding: 0;
+}
+
+.mapa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--azul);
+  color: #fff;
+}
+
+.mapa-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255,255,255,.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.live .dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(34,197,94,.2);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34,197,94,.4); }
+  70% { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+}
+
+.mapa-frame {
+  width: 100%;
+  height: 480px;
+  border: 0;
+  display: block;
+  filter: grayscale(10%) contrast(1.05);
+}
+
+.mapa-footer {
+  padding: 10px 14px;
+  background: #fefce8;
+  border-top: 1px solid #fde047;
+  font-size: 12px;
+  color: #57534e;
+  text-align: center;
+}
+
+/* ======================================================
+   ⚠️ ADAPTACIÓN DEL MENÚ DE CABECERA PARA CELULARES
+   ====================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Muestra el ícono ☰ en el celular */
+  }
+
+  .menu {
+    display: none; /* Oculta el menú horizontal */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--azul);
+    padding: 20px;
+    gap: 12px;
+    border-bottom: 4px solid var(--amarillo);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 99999;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .btn-menu-dropdown {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    position: static; /* Colapsa hacia abajo empujando el menú */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+    border: none;
+    margin-top: 5px;
+    border-radius: 8px;
+  }
+
+  .dropdown-menu a {
+    color: #ffffff !important;
+    padding-left: 24px;
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  .mapa-frame {
+    height: 350px; /* Hace el mapa un poco más pequeño en celulares para que quepa mejor */
+  }
+}
