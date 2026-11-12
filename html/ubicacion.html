@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ubicación oficial de la I.E. 81025 José Antonio Encinas - Av. Bolivia 489 Trujillo">
+  <title>Ubicación | I.E. 81025 José Antonio Encinas</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ubicacion.css">
+</head>
+<body>
+
+  <!-- Header / menú principal -->
+  <header class="header-azul">
+    <nav aria-label="Navegación principal" class="nav-container">
+      <div class="logo">
+        <img src="../img/Cole.jpeg" alt="Insignia I.E. 81025 José Antonio Encinas" width="70" height="70">
+        <h1>
+          <small>I.E. N° 81025</small>
+          JOSÉ ANTONIO ENCINAS
+        </h1>
+      </div>
+      <!-- Botón ☰ solo en celular -->
+      <button type="button" class="menu-toggle" id="menuToggleMobile" aria-label="Abrir menú de navegación">☰</button>
+      <div class="menu" id="menuPrincipalNav">
+        <a href="../index.html">Inicio</a>
+        <a href="inspiracion.html">Nuestro Patrono</a>
+        <a href="niveles.html">Niveles</a>
+        <!-- Menú desplegable Nosotros -->
+        <div class="dropdown">
+          <button type="button" class="btn-menu-dropdown" id="btnNosotros" aria-expanded="false" aria-haspopup="true" aria-controls="menuNosotros">
+            Nosotros ▾
+          </button>
+          <div id="menuNosotros" class="dropdown-menu" role="menu">
+            <a href="mision.html" role="menuitem">Misión y Visión</a>
+            <a href="resena.html" role="menuitem">Reseña Histórica</a>
+          </div>
+        </div>
+        <a href="ubicacion.html" aria-current="page">Ubicación</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Título de la página -->
+  <section class="hero-mini-ub">
+    <h2>Nuestra <span>Ubicación Institucional</span></h2>
+    <div class="linea-amarilla"></div>
+    <p>Sede oficial en el corazón de Trujillo - Av. Bolivia 489</p>
+  </section>
+
+  <main id="contenido" class="ubicacion-wrap">
+    <div class="grid-ubicacion">
+      <!-- Tarjeta con datos -->
+      <div class="card info-card">
+        <div class="badge-ub">SEDE OFICIAL 2026</div>
+        <h3>I.E. 81025<br>José Antonio Encinas</h3>
+        <div class="dato">
+          <div class="icon" aria-hidden="true">📍</div>
+          <div>
+            <strong>Dirección Oficial</strong>
+            <p id="direccion-text">Av. Bolivia 489, Trujillo 13001, La Libertad - Perú</p>
+            <button class="link-btn" id="btnCopiar" type="button">Copiar dirección</button>
+            <span id="copiado-msg" class="copiado-msg" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="dato">
+          <div class="icon" aria-hidden="true">🏫</div>
+          <div>
+            <strong>Institución</strong>
+            <p>
+              Pública de Gestión Directa<br>
+              Escolarizada - Mixta - Urbana<br>
+              Inicial, Primaria y Secundaria
+            </p>
+          </div>
+        </div>
+        <div class="dato">
+          <div class="icon" aria-hidden="true">🕘</div>
+          <div>
+            <strong>Horario de Atención</strong>
+            <p>Turno mañana<p>
+            <h6>Lun - Vie: 7:45 AM - 1:00 PM<br></h6>
+            <p>Turno Tarde<p>
+            <h6>Lun - Vie: 1:45 AM - 3:45 PM<br></h6>
+          </div>
+        </div>
+        <!-- Botones Maps y Waze -->
+        <div class="acciones">
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Bolivia+489+Trujillo" target="_blank" rel="noopener" class="btn primary full">Abrir en Google Maps</a>
+          <a href="https://waze.com/ul?q=Av.%20Bolivia%20489%20Trujillo" target="_blank" rel="noopener" class="btn secondary full dark">Abrir en Waze</a>
+        </div>
+      </div>
+      <!-- Mapa -->
+      <div class="card mapa-card">
+        <div class="mapa-header">
+          <h4>Mapa Interactivo</h4>
+          <span class="live"><span class="dot" aria-hidden="true"></span> En vivo</span>
+        </div>
+        <iframe class="mapa-frame" title="Mapa de la I.E. 81025 José Antonio Encinas" src="https://www.google.com/maps?q=Av.+Bolivia+489,+Trujillo,+Peru&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapa-footer">Haz click, arrastra y usa 2 dedos para zoom en celular</div>
+      </div>
+    </div>
+    <p class="referencia">Referencia: a 2 cuadras del Parque de la Juventud, frente a Av. Bolivia.</p>
+  </main>
+
+  <footer class="footer-azul">
+    <p><strong>I.E. 81025 JOSÉ ANTONIO ENCINAS</strong> © 2026 | Av. Bolivia 489 - Trujillo</p>
+    <small>Pública de Gestión Directa | Escolarizada - Mixta - Urbana | Buenos Aires, Víctor Larco Herrera</small>
+  </footer>
+
+  <script src="../js/ubicacion.js"></script>
+</body>
+</html>

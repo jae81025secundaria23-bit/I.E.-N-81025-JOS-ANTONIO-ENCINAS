@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio oficial de la I.E. 81025 José Antonio Encinas - Trujillo">
+  <title>I.E. 81025 JOSÉ ANTONIO ENCINAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header / menú principal -->
+  <header class="header-azul">
+    <nav aria-label="Navegación principal" class="nav-container">
+      <div class="logo">
+        <img src="img/Cole.jpeg" alt="Insignia I.E. 81025 José Antonio Encinas" width="70" height="70">
+        <h1>
+          <small>I.E. N° 81025</small>
+          JOSÉ ANTONIO ENCINAS
+        </h1>
+      </div>
+      <!-- Botón ☰ solo en celular -->
+      <button type="button" class="menu-toggle" id="menuToggleMobile" aria-label="Abrir menú de navegación">☰</button>
+      <div class="menu" id="menuPrincipalNav">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="html/inspiracion.html">Nuestro Patrono</a>
+        <a href="html/niveles.html">Niveles</a>
+        <!-- Menú desplegable Nosotros -->
+        <div class="dropdown">
+          <button type="button" class="btn-menu-dropdown" id="btnNosotros" aria-expanded="false" aria-haspopup="true" aria-controls="menuNosotros">
+            Nosotros ▾
+          </button>
+          <div id="menuNosotros" class="dropdown-menu" role="menu">
+            <a href="html/mision.html" role="menuitem">Misión y Visión</a>
+            <a href="html/resena.html" role="menuitem">Reseña Histórica</a>
+          </div>
+        </div>
+        <a href="html/ubicacion.html">Ubicación</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Portada principal -->
+  <section class="hero" role="banner">
+    <div class="hero-text">
+      <h2>
+        Una educación que
+        <span>inspira, que exige y que trasciende.</span>
+      </h2>
+      <p class="hero-desc">
+        Formando integralmente a niños y jóvenes con valores y vocación de servicio.
+      </p>
+    </div>
+  </section>
+
+  <!-- Lema del colegio -->
+  <section class="lema-bar" aria-label="Lema institucional">
+    <div class="lema-item">PATRIA</div>
+    <div class="lema-dot" aria-hidden="true">•</div>
+    <div class="lema-item">ESTUDIO</div>
+    <div class="lema-dot" aria-hidden="true">•</div>
+    <div class="lema-item">TRABAJO</div>
+  </section>
+
+  <main id="contenido">
+    <!-- ¿Por qué ser Enciniano? -->
+    <section class="pilares" aria-labelledby="titulo-pilares">
+      <h3 id="titulo-pilares">¿Por qué ser un Enciniano?</h3>
+      <div class="grid-4">
+        <article class="pilar-card">
+          <div class="icon" aria-hidden="true">🎯</div>
+          <h4>Valores</h4>
+          <p>Respeto, responsabilidad y solidaridad.</p>
+        </article>
+        <article class="pilar-card">
+          <div class="icon" aria-hidden="true">👨‍🏫</div>
+          <h4>Docentes</h4>
+          <p>Comprometidos con la formación integral.</p>
+        </article>
+        <article class="pilar-card">
+          <div class="icon" aria-hidden="true">🤝</div>
+          <h4>Familia</h4>
+          <p>Comunidad educativa unida.</p>
+        </article>
+        <article class="pilar-card">
+          <div class="icon" aria-hidden="true">💙</div>
+          <h4>Identidad</h4>
+          <p>Orgullo de la I.E. 81025.</p>
+        </article>
+      </div>
+    </section>
+    <!-- Historia resumen + foto -->
+    <section class="historia-resumen">
+      <div class="historia-text">
+        <span class="eyebrow">NUESTRO COMPROMISO</span>
+        <h3>Formación integral con valores</h3>
+        <p>
+          En la <span class="colegio-resaltado">Institución Educativa José Antonio Encinas</span>
+          asumimos con responsabilidad el compromiso de formar integralmente a nuestros
+          estudiantes, fortaleciendo no solo sus capacidades académicas, sino también
+          sus valores y su vocación de servicio.
+        </p>
+        <div class="stats">
+          <div><strong>+50</strong><span>Años</span></div>
+          <div><strong>3</strong><span>Niveles</span></div>
+          <div><strong>81025</strong><span>Código</span></div>
+        </div>
+      </div>
+      <div class="historia-img">
+        <img src="img/col.avif" alt="Fachada del colegio José Antonio Encinas" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-azul">
+    <p><strong>I.E. 81025 JOSÉ ANTONIO ENCINAS</strong> © 2026 | Av. Bolivia 489 - Trujillo</p>
+    <small>Pública de Gestión Directa | Escolarizada - Mixta - Urbana | Buenos Aires, Víctor Larco Herrera</small>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
